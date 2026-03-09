@@ -16,7 +16,8 @@ img {
 }
 
 .main-container {
-    max-width: 1200px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 /* UTILITY */
@@ -37,6 +38,14 @@ img {
     background-color: #E3E3E3;
 }
 
+.text-purple {
+    color: #6500FF;
+}
+
+.bcg-whitec{
+    background-color: white;
+}
+
 .big-text {
     font-size: 55px;
 }
@@ -53,6 +62,7 @@ ul {
 
 .header {
     padding: 24px;
+    position: relative;
     /* 
     display: flex;
     justify-content: space-between;
@@ -61,6 +71,7 @@ ul {
 
 .button-select {
     text-align: right;
+    position: absolute;
 }
 
 /* MAIN */
@@ -69,10 +80,16 @@ main {
     padding: 24px;
 }
 
+/* PLANS CARDS */
+
 div.plans {
     padding: 40px;
     border-radius: 24px;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.116);
+    flex-basis: calc((100% / 3) - (20px * 2) / 3);
+    min-width: 350px;
+    flex-shrink: 0;
+    flex-grow: 1;
 }
 
 .discount-percent {
@@ -84,6 +101,7 @@ div.plans {
 .action-button {
     border: none;
     width: 100%;
+    font-size: 16px;
     padding: 20px 20px;
     border-radius: 15px;
     margin-top: 20px;
@@ -104,4 +122,13 @@ div.plans {
 .bi-x-lg{
     margin-right: 10px;
     font-size: 20px;
+}
+
+/* MAIN-CONTAINER */
+
+.plan {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
